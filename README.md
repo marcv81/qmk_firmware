@@ -6,4 +6,4 @@ In the dev container.
     source venv/bin/activate
     pip3 install qmk
     qmk setup
-    qmk compile marcv81.json -kb keebio/nyquist/rev5
+    qmk compile -kb keebio/nyquist/rev5 -km marcv81
