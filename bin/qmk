@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+from pathlib import Path
+
+root = Path(__file__).resolve().parent.parent
+
+os.environ["QMK_HOME"] = str(root)
+os.environ["ORIG_CWD"] = os.getcwd()
+
+os.chdir(root)
+sys.path.insert(0, str(root / "lib/python"))
+
+import milc
+import qmk.cli
+
+sys.exit(milc.cli())
